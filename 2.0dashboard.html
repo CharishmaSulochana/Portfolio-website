@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+       body {
+    background-image: url('pic6.avif'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-color: black; /* Fallback background color */
+    color: white; /* Default color for body text to white for contrast */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 50px 0; /* Add padding for top spacing */
+}
+
+        h1 {
+            color: white; /* Header color */
+        }
+        p {
+            color: white; /* Login success message color */
+        }
+        nav {
+            position: fixed; /* Fix the navigation bar at the top */
+            top: 0; /* Position it at the top of the page */
+            left: 0; /* Align to the left */
+            right: 0; /* Align to the right */
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent dark background */
+            padding: 10px 0; /* Padding for the nav */
+            z-index: 1000; /* Ensure it stays on top */
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Optional shadow for depth */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white; /* Link color changed to white */
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #3a8ee8; /* Hover color */
+        }
+        .section {
+            margin: 30px auto; /* Increased margin for greater gap between sections */
+            padding: 5px; /* Padding for section content */
+            width: 80%; /* Set section width to 80% of the container */
+            max-width: 600px; /* Optional max-width to keep it from getting too wide */
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent dark background for sections */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Light shadow for depth */
+            color: white; /* Set default text color for sections to white */
+        }
+        .section h2 {
+            color: white; /* Section heading color changed to white */
+        }
+        .section p {
+            color: white; /* Section paragraph color changed to white */
+        }
+        .section a {
+            color: #3a8ee8; /* Link color for section links */
+            text-decoration: underline; /* Underline for links */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#academics">Academics</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#personal">Personal Details</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <h1>Welcome to the Dashboard</h1>
+    <p>You have successfully logged in!</p>
+
+    <div id="academics" class="section">
+        <h2>Academic Details</h2>
+        <p>Details about my education, grades, and institutions.</p>
+        <a href="academics.html">View My Academics</a> <!-- Hyperlink to academics page -->
+    </div>
+
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <p>A list of my project details and technologies used.</p>
+        <a href="projects.html">View My Projects</a> <!-- Hyperlink to projects page -->
+    </div>
+
+    <div id="publications" class="section">
+        <h2>Publications</h2>
+        <p>A list of my publications.</p>
+        <a href="publications.html">View My Publications</a> <!-- Hyperlink to publications page -->
+    </div>
+
+    <div id="personal" class="section">
+        <h2>Personal Details</h2>
+        <p>Information about my personal background and interests.</p>
+        <a href="personal.html">View My Personal Details</a> <!-- Hyperlink to personal page -->
+    </div>
+
+    <div id="gallery" class="section">
+        <h2>Gallery</h2>
+        <p>Photos of my achievements and events.</p>
+        <a href="gallery.html">View My Gallery</a> <!-- Hyperlink to gallery page -->
+    </div>
+
+</body>
+</html>

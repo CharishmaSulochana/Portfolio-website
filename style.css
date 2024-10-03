@@ -1,0 +1,16 @@
+/* External stylesheet for background and font color */
+body {
+    background-image: url('background.jpg');
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+  }
+  
+  header h1 {
+    color: #4CAF50;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0066CC;
+  }
+  

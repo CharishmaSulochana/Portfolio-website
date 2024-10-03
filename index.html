@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 60px; /* Adjusted padding for reduced navbar height */
+      color: white; /* Set default text color to white for better contrast */
+      background-image: url('pic5.avif'); /* Add your background image here */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+    }
+
+    /* Navigation bar */
+    nav {
+      position: fixed; /* Fix the navigation bar to the top */
+      width: 100%; /* Ensure it spans the full width */
+      top: 0; /* Position at the top */
+      left: 0;
+      display: flex;
+      justify-content: space-between; /* Space between name and links */
+      align-items: center; /* Center items vertically */
+      background-color: black; /* Solid color for navbar */
+      padding: 10px 20px; /* Reduced padding for smaller height */
+      z-index: 1000; /* Ensure it stays above other content */
+    }
+
+    /* Style for name on the left of the navigation bar */
+    #name {
+      color: white;
+      font-size: 18px; /* Slightly smaller font size */
+      font-weight: bold;
+    }
+
+    /* Style for navigation links */
+    nav a {
+      margin-left: 10px; /* Margin between links */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px; /* Smaller font size for links */
+    }
+
+    nav a:first-child {
+      margin-left: 0; /* Remove margin for the first link */
+    }
+
+    nav a:last-child {
+      margin-left: 20px; /* Add margin to the left of Contact Us */
+    }
+
+    nav a:hover {
+      background-color: #777; /* Slightly lighter for hover effect */
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    /* Center introduction text */
+    .intro {
+      font-size: 18px;
+      margin: 20px;
+      text-align: justify; /* Change to justify for equal alignment */
+      width: 80%; /* Adjusted width for better visibility */
+      max-width: 800px; /* Set a maximum width for large screens */
+      margin-left: auto; /* Center the content */
+      margin-right: auto; /* Center the content */
+      background-color: rgba(0, 0, 0, 0.0); /* Solid background for text */
+      padding: 20px; /* Add some padding around the text */
+      border-radius: 10px; /* Optional: round the corners */
+    }
+    
+    /* Profile picture on right center, zoomed in more */
+    img {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%) scale(1.5); /* Zoom in the image more */
+      width: 150px; /* Set width to a smaller size */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Allow image to scale without distortion */
+      border-radius: 10%; /* Optional: round the corners of the image */
+    }
+
+    /* General styles */
+    header {
+      height: auto; /* Allow height to adjust based on content */
+      position: relative;
+      padding-bottom: 60px; /* Prevent content from overlapping the image */
+    }
+
+    /* Allow scrolling for the intro text */
+    .intro {
+      padding-top: 80px; /* Add padding to the top for spacing */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Navigation bar -->
+    <nav>
+      <div id="name">Balla Charishma Sulochana</div> <!-- Name on the left side -->
+      <div>
+        <a href="1.2visitor-login.html">Login</a>
+        <a href="1.1contact.html">Contact</a> 
+        <a>More</a>
+      </div>
+    </nav>
+
+    <!-- Introduction with three paragraphs -->
+    <div class="intro">
+      <p>Hi, I'm Charishma, a passionate tech enthusiast with a deep interest in artificial intelligence and machine learning. My journey into the world of AI began during my undergraduate studies, where I immersed myself in various projects and gained hands-on experience with cutting-edge technologies. I love exploring innovative solutions to real-world problems and constantly learning new skills to stay ahead in this dynamic field.</p>
+      
+      <p>Throughout my career, I've worked on a wide range of AI-driven projects, from building neural networks to developing natural language processing models. These experiences have honed my skills in programming languages such as Python and SQL, as well as tools like TensorFlow and PyTorch. I enjoy collaborating with like-minded individuals who share my passion for AI and data science.</p>
+      
+      <p>In addition to my technical expertise, I am an avid traveler, and I find inspiration in exploring new cultures and landscapes. My goal is to continue pushing the boundaries of AI technology while contributing to innovative projects that have a positive impact on society. Welcome to my portfolio, where you can learn more about my work and aspirations!</p>
+    </div>
+
+    <!-- Profile picture, zoomed in significantly -->
+    <img src="InShot_20240422_145422838.jpg" alt="Profile Picture">   
+  </header>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitor Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .login-container {
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .login-container h2 {
+      text-align: center;
+      color: #333;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #45a049;
+    }
+    .instructions {
+      color: #555;
+      font-size: 14px;
+    }
+    #password-strength {
+      height: 10px;
+      width: 100%;
+      margin-top: 5px;
+      background-color: #ccc;
+      border-radius: 5px;
+    }
+    .error-message {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Visitor Login</h2>
+    <form id="loginForm" method="post">
+      <input type="text" id="username" name="username" placeholder="Username" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <div id="password-strength"></div>
+      <br>
+      <button type="submit">Login</button>
+      <p id="error-message" class="error-message"></p>
+    </form>
+    <p style="text-align: center;">Not registered? <a href="register.html">Register here</a></p>
+    
+    <p>Instructions for password:</p>
+    <p class="instructions">1. Username must start with a letter.<br>2. Password must be at least 8 characters long.<br>3. Must have a lowercase letter, an uppercase letter.<br>4. Must have a number and a symbol.</p>
+  </div>
+
+  <script>
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const passwordStrengthBar = document.getElementById('password-strength');
+    const form = document.getElementById('loginForm');
+    const errorMessage = document.getElementById('error-message');
+
+    // Hardcoded username and password
+    const correctUsername = 'Charishma18';
+    const correctPassword = 'Cha@1234';
+
+    // Regular expressions for validation
+    const usernameRegex = /^[a-zA-Z][a-zA-Z0-9]*$/; // Username must start with a letter
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/; // Password must contain various characters
+
+    // Update password strength bar
+    passwordInput.addEventListener('input', function () {
+      const password = passwordInput.value;
+      let strength = 0;
+
+      // Check for different types of characters in the password
+      if (password.length >= 8) strength += 1;
+      if (/[a-z]/.test(password)) strength += 1;
+      if (/[A-Z]/.test(password)) strength += 1;
+      if (/\d/.test(password)) strength += 1;
+      if (/[\W_]/.test(password)) strength += 1;
+
+      // Update the strength bar color based on strength
+      switch (strength) {
+        case 1:
+          passwordStrengthBar.style.backgroundColor = 'red';
+          passwordStrengthBar.style.width = '20%';
+          break;
+        case 2:
+          passwordStrengthBar.style.backgroundColor = 'orange';
+          passwordStrengthBar.style.width = '40%';
+          break;
+        case 3:
+          passwordStrengthBar.style.backgroundColor = 'yellow';
+          passwordStrengthBar.style.width = '60%';
+          break;
+        case 4:
+          passwordStrengthBar.style.backgroundColor = 'lightgreen';
+          passwordStrengthBar.style.width = '80%';
+          break;
+        case 5:
+          passwordStrengthBar.style.backgroundColor = 'green';
+          passwordStrengthBar.style.width = '100%';
+          break;
+        default:
+          passwordStrengthBar.style.backgroundColor = '#ccc';
+          passwordStrengthBar.style.width = '0%';
+      }
+    });
+
+    // Validate form on submit
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent the form from submitting to check the credentials first
+      const username = usernameInput.value;
+      const password = passwordInput.value;
+
+      // Validate username and password
+      if (!usernameRegex.test(username)) {
+        errorMessage.textContent = 'Username must start with a letter and contain only alphanumeric characters.';
+        return;
+      }
+
+      if (!passwordRegex.test(password)) {
+        errorMessage.textContent = 'Password must contain at least 8 characters, a lowercase letter, an uppercase letter, a number, and a symbol.';
+        return;
+      }
+
+      // Check if the username and password match
+      if (username === correctUsername && password === correctPassword) {
+        window.location.href = "2.0dashboard.html"; // Redirect to dashboard
+      } else {
+        errorMessage.textContent = 'Invalid username or password. Please try again.';
+      }
+    });
+  </script>
+</body>
+</html>
