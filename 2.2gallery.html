@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            background-image: url('pic4.avif'); /* Update the path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Text color */
+            font-family: Arial, sans-serif;
+            text-align: left; /* Align text to the left */
+            margin: 50px;
+        }
+
+        h1 {
+            color: white; /* Header color */
+            text-align: center;
+        }
+
+        nav {
+            position: fixed; /* Fix the navigation bar at the top */
+            top: 0; /* Position it at the top of the page */
+            left: 0; /* Align to the left */
+            right: 0; /* Align to the right */
+            text-align: center;
+            background-color: white; /* Set background color to white */
+            padding: 10px 0; /* Padding for the nav */
+            z-index: 1000; /* Ensure it stays on top */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black; /* Change link color to black */
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #777;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(253, 251, 251, 0.977);
+            color: #ffffff; /* Dark text color for sections */
+        }
+
+        .section h2 {
+            color: #ffffff; /* Section heading color */
+        }
+
+        .image-row {
+            display: flex; /* Use flexbox for horizontal layout */
+            justify-content: space-around; /* Distribute space around images */
+            margin-top: 10px; /* Margin for spacing */
+        }
+
+        .image-row img {
+            width: 30%; /* Set width of images to 30% */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        /* Back to dashboard link style */
+        .back-link {
+            color: #3a8ee8; /* Link color */
+            text-decoration: none; /* No underline */
+            margin-top: 20px; /* Top margin for spacing */
+            display: inline-block; /* Block to allow margin */
+        }
+
+        /* Lightbox (modal) styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="2.5academics.html">Academics</a>
+        <a href="2.3projects.html">Projects</a>
+        <a href="2.4publications.html">Publications</a>
+        <a href="2.1personal.html">Personal Details</a>
+        <a href="2.2gallery.html">Gallery</a>
+    </nav>
+    
+    <h1>Gallery</h1>
+
+    <div class="section">
+        <h2>Certificates of my publications:</h2>
+        <div class="image-row">
+            <img src="cer1.png" alt="Publication Certificate 1" class="myImg">
+            <img src="cer2.png" alt="Publication Certificate 2" class="myImg">
+            <img src="cer3.png" alt="Publication Certificate 3" class="myImg">
+        </div>
+    </div>
+
+    <div class="section">
+        <p>Certificates of my Courses:</p>
+        <div class="image-row">
+            <img src="course1.png" alt="Course Certificate 1" class="myImg">
+            <img src="course2.jpeg" alt="Course Certificate 2" class="myImg">
+            <img src="course3.jpg" alt="Course Certificate 3" class="myImg">
+        </div>
+    </div>
+
+    <a href="2.0dashboard.html" style="color: #3a8ee8;">Back to Dashboard</a> <!-- Link back to dashboard -->
+
+    <!-- The Modal for Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("myImg");
+        var modalImg = document.getElementById("img01");
+
+        for (let i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

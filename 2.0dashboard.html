@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-image: url('pic4.avif'); /* Add your background image */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+           
+            color: white; /* Default color for body text to white for contrast */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0; /* Remove default margin */
+            padding: 50px 0; /* Add padding for top spacing */
+        }
+
+        h1 {
+            color: white; /* Header color */
+            text-align: center;
+        }
+        p {
+            color: white; /* Login success message color */
+        }
+        nav {
+            position: fixed; /* Fix the navigation bar at the top */
+            top: 0; /* Position it at the top of the page */
+            left: 0; /* Align to the left */
+            right: 0; /* Align to the right */
+            text-align: center;
+            background-color: white; /* Change background color to white */
+            padding: 10px 0; /* Padding for the nav */
+            z-index: 1000; /* Ensure it stays on top */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black; /* Change link color to black for contrast */
+            font-weight: bold;
+        }
+        nav a:hover {
+       
+            background-color: #777;
+            color: white;
+             padding: 5px;
+            border-radius: 5px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+           /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(253, 251, 251, 0.977);
+            color: #ffffff; /* Dark text color for sections */
+        }
+        .section h2 {
+            color: #ffffff; /* Section heading color */
+        }
+        .section h3 {
+            color: #ffffff; /* Section heading color */
+        }
+        .section a {
+            color: #3a8ee8; /* Link color for section links */
+            text-decoration: underline; /* Underline for links */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="2.5academics.html">Academics</a>
+        <a href="2.3projects.html">Projects</a>
+        <a href="2.4publications.html">Publications</a>
+        <a href="2.1personal.html">Personal Details</a>
+        <a href="2.2gallery.html">Gallery</a>
+    </nav>
+
+    <h1>Welcome to the Dashboard</h1>
+    <p>You have successfully logged in!</p>
+
+    <div id="academics" class="section">
+        <h2>Academic Details</h2>
+        <p>Details about my education, grades, and institutions.</p>
+        <a href="2.5academics.html">View My Academics</a> <!-- Hyperlink to academics page -->
+    </div>
+
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <p>A list of my project details and technologies used.</p>
+        <a href="2.3projects.html">View My Projects</a> <!-- Hyperlink to projects page -->
+    </div>
+
+    <div id="publications" class="section">
+        <h2>Publications</h2>
+        <p>A list of my publications.</p>
+        <a href="2.4publications.html">View My Publications</a> <!-- Hyperlink to publications page -->
+    </div>
+
+    <div id="personal" class="section">
+        <h2>Personal Details</h2>
+        <p>Information about my personal background and interests.</p>
+        <a href="2.1personal.html">View My Personal Details</a> <!-- Hyperlink to personal page -->
+    </div>
+
+    <div id="gallery" class="section">
+        <h2>Gallery</h2>
+        <p>Photos of my achievements and events.</p>
+        <a href="2.2gallery.html">View My Gallery</a> <!-- Hyperlink to gallery page -->
+    </div>
+
+</body>
+</html>
