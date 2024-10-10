@@ -4,99 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - My Portfolio</title>
+  
+  <!-- Load Font Awesome from CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      padding-top: 60px; /* Adjusted padding for reduced navbar height */
-      color: white; /* Set default text color to white for better contrast */
-      background-image: url('pic5.avif'); /* Add your background image here */
-      background-size: cover; /* Cover the entire background */
-      background-position: center; /* Center the background image */
-      background-repeat: no-repeat; /* Prevent the image from repeating */
+      padding-top: 60px;
+      color: white;
+      background-image: url('pic4.avif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    /* Navigation bar */
     nav {
-      position: fixed; /* Fix the navigation bar to the top */
-      width: 100%; /* Ensure it spans the full width */
-      top: 0; /* Position at the top */
+      position: fixed;
+      width: 100%;
+      top: 0;
       left: 0;
       display: flex;
-      justify-content: space-between; /* Space between name and links */
-      align-items: center; /* Center items vertically */
-      background-color: black; /* Solid color for navbar */
-      padding: 10px 20px; /* Reduced padding for smaller height */
-      z-index: 1000; /* Ensure it stays above other content */
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 20px;
+      z-index: 1000;
+      flex-wrap: wrap;
     }
 
-    /* Style for name on the left of the navigation bar */
     #name {
-      color: white;
-      font-size: 18px; /* Slightly smaller font size */
+      color: black;
+      font-size: 18px;
       font-weight: bold;
     }
 
-    /* Style for navigation links */
     nav a {
-      margin-left: 10px; /* Margin between links */
-      color: white;
+      margin-left: 10px;
+      color: black;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px; /* Smaller font size for links */
+      font-size: 16px;
     }
 
     nav a:first-child {
-      margin-left: 0; /* Remove margin for the first link */
-    }
-
-    nav a:last-child {
-      margin-left: 20px; /* Add margin to the left of Contact Us */
+      margin-left: 0;
     }
 
     nav a:hover {
-      background-color: #777; /* Slightly lighter for hover effect */
-      color: white;
+      background-color: #777;
+      color: black;
       padding: 5px;
       border-radius: 5px;
     }
 
-    /* Center introduction text */
+    @media screen and (max-width: 768px) {
+      nav {
+        padding: 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+        margin-left: 5px;
+      }
+
+      #name {
+        font-size: 16px;
+      }
+    }
+
     .intro {
       font-size: 18px;
       margin: 20px;
-      text-align: justify; /* Change to justify for equal alignment */
-      width: 80%; /* Adjusted width for better visibility */
-      max-width: 800px; /* Set a maximum width for large screens */
-      margin-left: auto; /* Center the content */
-      margin-right: auto; /* Center the content */
-      background-color: rgba(0, 0, 0, 0.0); /* Solid background for text */
-      padding: 20px; /* Add some padding around the text */
-      border-radius: 10px; /* Optional: round the corners */
+      text-align: justify;
+      width: 80%;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(0, 0, 0, 0.0);
+      padding: 20px;
+      border-radius: 10px;
     }
-    
-    /* Profile picture on right center, zoomed in more */
+
     img {
       position: absolute;
       top: 50%;
       right: 10%;
-      transform: translateY(-50%) scale(1.5); /* Zoom in the image more */
-      width: 150px; /* Set width to a smaller size */
-      height: auto; /* Maintain aspect ratio */
-      object-fit: cover; /* Allow image to scale without distortion */
-      border-radius: 10%; /* Optional: round the corners of the image */
+      transform: translateY(-50%) scale(1.5);
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10%;
     }
 
-    /* General styles */
     header {
-      height: auto; /* Allow height to adjust based on content */
+      height: auto;
       position: relative;
-      padding-bottom: 60px; /* Prevent content from overlapping the image */
+      padding-bottom: 60px;
     }
 
-    /* Allow scrolling for the intro text */
     .intro {
-      padding-top: 80px; /* Add padding to the top for spacing */
+      padding-top: 80px;
+    }
+
+    /* Style for social media icons */
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 15px;
+      font-size: 30px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #0072b1; /* LinkedIn hover color */
+    }
+
+    .social-icons a.github:hover {
+      color: #333; /* GitHub hover color */
     }
   </style>
 </head>
@@ -105,11 +136,11 @@
   <header>
     <!-- Navigation bar -->
     <nav>
-      <div id="name">Balla Charishma Sulochana</div> <!-- Name on the left side -->
+      <div id="name">Balla Charishma Sulochana</div>
       <div>
-        <a href="1.2visitor-login.html">Login</a>
-        <a href="1.1contact.html">Contact</a> 
-        <a>More</a>
+        <a href="1.2visitor-login.html">Visitor Login</a>
+        <a href="1.1contact.html">Contact</a>
+        <a href="1.3owner-login.html">Owner Login</a>
       </div>
     </nav>
 
@@ -122,8 +153,15 @@
       <p>In addition to my technical expertise, I am an avid traveler, and I find inspiration in exploring new cultures and landscapes. My goal is to continue pushing the boundaries of AI technology while contributing to innovative projects that have a positive impact on society. Welcome to my portfolio, where you can learn more about my work and aspirations!</p>
     </div>
 
-    <!-- Profile picture, zoomed in significantly -->
+    <!-- Profile picture -->
     <img src="InShot_20240422_145422838.jpg" alt="Profile Picture">   
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/balla-charishma-sulochana/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/CharishmaSulochana" target="_blank" class="github"><i class="fab fa-github"></i></a>
+      <a href="https://mail.google.com/" target="_blank" class="envelope"><i class="fa-solid fa-envelope"></i></a>
+    </div>
   </header>
 
 </body>
